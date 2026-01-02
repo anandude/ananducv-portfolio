@@ -100,7 +100,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="text-sm text-muted-foreground font-mono">FOCUS</div>
                 <div className="flex flex-wrap gap-2">
-                  {["Next.js", "TypeScript", "Tailwind CSS", "Web Crypto API", "Zero-knowledge"].map((skill) => (
+                  {["Next.js", "TypeScript", "Tailwind CSS", "React", "Performance"].map((skill) => (
                     <span
                       key={skill}
                       className="px-3 py-1 text-xs border border-border rounded-full hover:border-muted-foreground/50 transition-colors duration-300"
@@ -132,7 +132,7 @@ export default function Home() {
                   role: "Frontend Developer",
                   company: "Zecrypt Labs",
                   description:
-                    "Building privacy-first, zero-knowledge web apps. Implemented i18n (next-intl) and end‑to‑end encryption with Web Crypto APIs (RSA‑OAEP, AES‑256‑GCM).",
+                    "Building fast, secure, and scalable web applications. Implemented i18n (next-intl) and robust encryption features with Web Crypto APIs.",
                   tech: ["Next.js", "TypeScript", "Tailwind CSS", "Web Crypto API"],
                 },
                 {
