@@ -305,7 +305,7 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   { name: "GitHub", handle: "@anandude", url: "https://github.com/anandude" },
-                  { name: "Zecrypt", handle: "zecrypt.io", url: "https://zecrypt.io" },
+                  { name: "X", handle: "@ananduude", url: "https://x.com/ananduude" },
                   { name: "Medium", handle: "@ananducv", url: "https://medium.com/@ananducv" },
                   { name: "LinkedIn", handle: "/in/anandakrishnan-cv", url: "https://www.linkedin.com/in/anandakrishnan-cv/" },
                 ].map((social) => (
