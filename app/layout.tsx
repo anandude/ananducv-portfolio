@@ -10,9 +10,9 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: "ananducv",
+  title: "Anandakrishnan CV — Software & Applied AI Engineer",
   description:
-    "Frontend developer at Zecrypt Labs building secure, modern web apps with Next.js, TypeScript, Tailwind CSS, and Web Crypto APIs. Focused on zero-knowledge architecture and privacy-first design.",
+    "Software & Applied AI Engineer at Two Fold Marketing Solutions building full-stack products end-to-end — CRM, ERP, client portals, financial workflows and AI automation. Previously Frontend Developer at Mydevtools, contributing to Zecrypt zero-knowledge secure storage and 30–40 open-source dev tools.",
   generator: "v0.app",
   icons: {
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦕</text></svg>",

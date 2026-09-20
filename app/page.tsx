@@ -93,17 +93,20 @@ export default function Home() {
 
               <div className="space-y-6 max-w-md">
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                  Frontend developer at Zecrypt Labs, building secure, modern web apps with
-                  <span className="text-foreground"> Next.js</span>,<span className="text-foreground"> TypeScript</span>
-                  , and <span className="text-foreground">Tailwind CSS</span>. Focused on Creative, Minimalist, and privacy-first design.
+                  Software & Applied AI Engineer, taking ideas from research to working product — full-stack product
+                  development with
+                  <span className="text-foreground"> AI & Automation</span>,
+                  <span className="text-foreground"> Architecture</span>, and
+                  <span className="text-foreground"> Production-ready delivery</span>. Focused on ownership, ambiguous
+                  problems, and building from the ground up.
                 </p>
 
                 <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    Available for work
+                    Open to work
                   </div>
-                  <div>Thrissur, Kerala, India</div>
+                  <div>Chalakkudy, Kerala, India</div>
                 </div>
               </div>
             </div>
@@ -112,16 +115,16 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="text-sm text-muted-foreground font-mono">CURRENTLY</div>
                 <div className="space-y-2">
-                  <div className="text-foreground">Frontend Developer</div>
-                  <div className="text-muted-foreground">@ Zecrypt Labs</div>
-                  <div className="text-xs text-muted-foreground">2025 — Present</div>
+                  <div className="text-foreground">Software & Applied AI Engineer</div>
+                  <div className="text-muted-foreground">@ Two Fold Marketing Solutions</div>
+                  <div className="text-xs text-muted-foreground">2026 — Present · Dubai, UAE · Remote</div>
                 </div>
               </div>
 
               <div className="space-y-4">
                 <div className="text-sm text-muted-foreground font-mono">FOCUS</div>
                 <div className="flex flex-wrap gap-2">
-                  {["Next.js", "TypeScript", "Tailwind CSS", "React", "Security"].map((skill) => (
+                  {["Full-Stack Development", "AI Tools & Workflows", "Software Architecture", "Business Solutions", "Claude Code"].map((skill) => (
                     <span
                       key={skill}
                       className="px-3 py-1 text-xs border border-border rounded-full hover:border-muted-foreground/50 transition-colors duration-300"
@@ -143,26 +146,26 @@ export default function Home() {
           <div className="space-y-12 sm:space-y-16">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
               <h2 className="text-3xl sm:text-4xl font-light">Selected Work</h2>
-              <div className="text-sm text-muted-foreground font-mono">2023 — 2025</div>
+              <div className="text-sm text-muted-foreground font-mono">2025 — 2026</div>
             </div>
 
             <div className="space-y-8 sm:space-y-12">
               {[
                 {
-                  year: "2025",
-                  role: "Frontend Developer",
-                  company: "Zecrypt Labs",
+                  year: "2026",
+                  role: "Software & Applied AI Engineer",
+                  company: "Two Fold Marketing Solutions · Dubai, UAE · Remote",
                   description:
-                    "Building fast, secure, and scalable web applications. Implemented i18n (next-intl) and robust encryption features with Web Crypto APIs.",
-                  tech: ["Next.js", "TypeScript", "Tailwind CSS", "Web Crypto API"],
+                    "Own software projects end-to-end — from requirements, research and architecture through frontend, backend, database design, integrations, deployment and production rollout. Built AyurHeritage clinical CRM, Zevyora Capital client/admin portal (Sumsub KYC, trading accounts, ledger), RevenueGraph financial workflows, ERP systems (Lead → Customer → Quotation → Invoice → Payment → Receipt), production landing pages, and a Vapi + n8n + Google Calendar voice-agent workflow. AI-assisted development throughout for fast, production-oriented delivery.",
+                  tech: ["Full-Stack", "AI Workflows", "CRM / ERP", "Automation", "Production Delivery"],
                 },
                 {
-                  year: "2023—2025",
-                  role: "Web Developer",
-                  company: "Freelance",
+                  year: "2025",
+                  role: "Frontend Developer",
+                  company: "Mydevtools · Kochi, India · Hybrid",
                   description:
-                    "Designed and delivered responsive, performance-optimized websites for diverse clients, including portfolios, landing pages, and business sites.",
-                  tech: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+                    "Worked on open-source developer products and security-focused software. Contributed substantially to Zecrypt — a zero-knowledge-oriented secrets and secure-storage platform (web app, FastAPI backend, encrypted storage, Chromium extension) — co-developing major parts of the encryption architecture. Built ~30–40 of MyDevTools' 80+ tools, plus Kanban/task management, notes, password vault, and database exploration features across Next.js, TypeScript, FastAPI and MongoDB.",
+                  tech: ["Next.js", "TypeScript", "FastAPI", "MongoDB", "Web Crypto API"],
                 },
                 {
                   year: "2024",
