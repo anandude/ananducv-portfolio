@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Lenis from "lenis"
 import { useEffect, useRef, useState } from "react"
+import { caseStudies, sharedPatterns, EMPLOYER } from "@/lib/case-studies"
 
 export default function Home() {
   const [isDark, setIsDark] = useState(true)
@@ -61,7 +62,7 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground relative">
       <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
         <div className="flex flex-col gap-4">
-          {["intro", "work", "thoughts", "connect"].map((section) => (
+          {["intro", "work", "case-studies", "thoughts", "connect"].map((section) => (
             <button
               key={section}
               onClick={() => document.getElementById(section)?.scrollIntoView({ behavior: "smooth" })}
@@ -116,7 +117,7 @@ export default function Home() {
                 <div className="text-sm text-muted-foreground font-mono">CURRENTLY</div>
                 <div className="space-y-2">
                   <div className="text-foreground">Software & Applied AI Engineer</div>
-                  <div className="text-muted-foreground">@ Two Fold Marketing Solutions</div>
+                  <div className="text-muted-foreground">@ {EMPLOYER}</div>
                   <div className="text-xs text-muted-foreground">2026 — Present · Dubai, UAE · Remote</div>
                 </div>
               </div>
@@ -154,9 +155,9 @@ export default function Home() {
                 {
                   year: "2026",
                   role: "Software & Applied AI Engineer",
-                  company: "Two Fold Marketing Solutions · Dubai, UAE · Remote",
+                  company: `${EMPLOYER} · Dubai, UAE · Remote`,
                   description:
-                    "Own software projects end-to-end — from requirements, research and architecture through frontend, backend, database design, integrations, deployment and production rollout. Built AyurHeritage clinical CRM, Zevyora Capital client/admin portal (Sumsub KYC, trading accounts, ledger), RevenueGraph financial workflows, ERP systems (Lead → Customer → Quotation → Invoice → Payment → Receipt), production landing pages, and a Vapi + n8n + Google Calendar voice-agent workflow. AI-assisted development throughout for fast, production-oriented delivery.",
+                    "Sole engineer on six production business systems for UAE clients — owning each from requirements, data modelling and architecture through frontend, backend, deployment and rollout. They include a multi-branch double-entry accounting ERP with VAT and corporate tax, a trading-signals investment portal with an append-only ledger, a clinic CRM with role-based patient handoffs, and quotation-to-payment suites for an agency, an installer and an art studio (see Case Studies below). Also built production landing pages and a Vapi + n8n + Google Calendar voice-agent workflow, using AI-assisted development throughout.",
                   tech: ["Full-Stack", "AI Workflows", "CRM / ERP", "Automation", "Production Delivery"],
                 },
                 {
@@ -211,8 +212,85 @@ export default function Home() {
         </section>
 
         <section
-          id="thoughts"
+          id="case-studies"
           ref={(el) => { sectionsRef.current[2] = el }}
+          className="py-20 sm:py-32 opacity-0"
+        >
+          <div className="space-y-12 sm:space-y-16">
+            <div className="space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+                <h2 className="text-3xl sm:text-4xl font-light">Case Studies</h2>
+                <div className="text-sm text-muted-foreground font-mono">{caseStudies.length} SYSTEMS · SOLE ENGINEER</div>
+              </div>
+              <p className="text-muted-foreground leading-relaxed max-w-2xl">
+                Production systems I designed and built for clients at {EMPLOYER}. Each one has a full walkthrough
+                video, recorded on a copy of the live system with the client&apos;s data replaced by demo data.
+              </p>
+            </div>
+
+            <div className="grid gap-6 sm:gap-8 sm:grid-cols-2">
+              {caseStudies.map((study) => (
+                <Link
+                  key={study.slug}
+                  href={`/work/${study.slug}`}
+                  className="group border border-border rounded-lg overflow-hidden hover:border-muted-foreground/50 transition-all duration-500 hover:shadow-lg block"
+                >
+                  <div className="relative aspect-video bg-muted overflow-hidden">
+                    <img
+                      src={`/case-studies/${study.slug}.jpg`}
+                      alt=""
+                      loading="lazy"
+                      className="h-full w-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
+                    />
+                    <span className="absolute bottom-3 left-3 rounded bg-background/80 px-2 py-1 font-mono text-xs text-muted-foreground backdrop-blur">
+                      ▶ Walkthrough
+                    </span>
+                  </div>
+                  <div className="p-6 space-y-3">
+                    <div className="text-xs text-muted-foreground font-mono">{study.sector}</div>
+                    <h3 className="text-lg sm:text-xl font-medium group-hover:text-muted-foreground transition-colors duration-300">
+                      {study.name}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{study.oneLiner}</p>
+                    <div className="flex items-center justify-between gap-4 pt-2">
+                      <div className="flex flex-wrap gap-2">
+                        {study.stack.slice(0, 3).map((tech) => (
+                          <span key={tech} className="px-2 py-1 text-xs border border-border rounded text-muted-foreground">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <svg
+                        className="w-4 h-4 shrink-0 text-muted-foreground transform group-hover:translate-x-1 group-hover:text-foreground transition-all duration-300"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-6 lg:gap-12 pt-8 border-t border-border/50">
+              <div className="text-sm text-muted-foreground font-mono">ACROSS ALL SIX</div>
+              <ul className="lg:col-span-2 space-y-3">
+                {sharedPatterns.map((pattern) => (
+                  <li key={pattern} className="flex gap-4 text-muted-foreground leading-relaxed">
+                    <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-muted-foreground/50" />
+                    <span>{pattern}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="thoughts"
+          ref={(el) => { sectionsRef.current[3] = el }}
           className="min-h-screen py-20 sm:py-32 opacity-0"
         >
           <div className="space-y-12 sm:space-y-16">
@@ -294,7 +372,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="connect" ref={(el) => { sectionsRef.current[3] = el }} className="py-20 sm:py-32 opacity-0">
+        <section id="connect" ref={(el) => { sectionsRef.current[4] = el }} className="py-20 sm:py-32 opacity-0">
           <div className="grid lg:grid-cols-2 gap-12 sm:gap-16">
             <div className="space-y-6 sm:space-y-8">
               <h2 className="text-3xl sm:text-4xl font-light">Let's Connect</h2>
