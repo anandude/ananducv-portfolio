@@ -95,7 +95,7 @@ export default function Home() {
 
               <div className="space-y-6 max-w-md">
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                  Software & Applied AI Engineer, taking ideas from research to working product — full-stack product
+                  Software & AI Engineer, taking ideas from research to working product — full-stack product
                   development with
                   <span className="text-foreground"> AI & Automation</span>,
                   <span className="text-foreground"> Architecture</span>, and
@@ -117,7 +117,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="text-sm text-muted-foreground font-mono">CURRENTLY</div>
                 <div className="space-y-2">
-                  <div className="text-foreground">Software & Applied AI Engineer</div>
+                  <div className="text-foreground">Software & AI Engineer</div>
                   <div className="text-muted-foreground">@ {EMPLOYER}</div>
                   <div className="text-xs text-muted-foreground">2026 — Present · Dubai, UAE · Remote</div>
                 </div>
@@ -155,7 +155,7 @@ export default function Home() {
               {[
                 {
                   year: "2026",
-                  role: "Software & Applied AI Engineer",
+                  role: "Software & AI Engineer",
                   company: `${EMPLOYER} · Dubai, UAE · Remote`,
                   description:
                     "Sole engineer on six production business systems for UAE clients — owning each from requirements, data modelling and architecture through frontend, backend, deployment and rollout. They include a multi-branch double-entry accounting ERP with VAT and corporate tax, a trading-signals investment portal with an append-only ledger, a clinic CRM with role-based patient handoffs, and quotation-to-payment suites for an agency, an installer and an art studio (see Case Studies below). Also built production landing pages and a Vapi + n8n + Google Calendar voice-agent workflow, using AI-assisted development throughout.",
